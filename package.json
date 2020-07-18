@@ -1,7 +1,7 @@
 {
-  "name": "@cwoolum/otp-input",
+  "name": "universal-otp-input",
   "version": "0.1.0",
-  "description": "Stencil Component Starter",
+  "description": "An OTP Input that works with all Frameworks or no framework at all!!",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",

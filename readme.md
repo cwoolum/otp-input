@@ -37,8 +37,15 @@ Need help? Check out our docs [here](https://stenciljs.com/docs/my-first-compone
 
 ## Using this component
 
-### Node Modules
+### Angular
 
-- Run `npm install @cwoolum/otp-component --save`
-- Put a script tag similar to this `<script src='node_modules/@cwoolum/otp-component/dist/otp-component.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
+- Run `npm install universal-otp-component --save`
+- In `main.ts`, add the following lines
+
+  ```javascript
+  import { defineCustomElements } from "universal-otp-input/loader";
+
+  defineCustomElements(window);
+  ```
+
+- In `app.module.ts`, add `schemas: [CUSTOM_ELEMENTS_SCHEMA]` to your `@NgModule` configuration.
