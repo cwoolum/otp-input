@@ -6,35 +6,35 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface OtcInput {
+    interface OtpInput {
         "characterCount": number;
     }
 }
 declare global {
-    interface HTMLOtcInputElement extends Components.OtcInput, HTMLStencilElement {
+    interface HTMLOtpInputElement extends Components.OtpInput, HTMLStencilElement {
     }
-    var HTMLOtcInputElement: {
-        prototype: HTMLOtcInputElement;
-        new (): HTMLOtcInputElement;
+    var HTMLOtpInputElement: {
+        prototype: HTMLOtpInputElement;
+        new (): HTMLOtpInputElement;
     };
     interface HTMLElementTagNameMap {
-        "otc-input": HTMLOtcInputElement;
+        "otp-input": HTMLOtpInputElement;
     }
 }
 declare namespace LocalJSX {
-    interface OtcInput {
+    interface OtpInput {
         "characterCount"?: number;
         "onCodeChanged"?: (event: CustomEvent<string>) => void;
     }
     interface IntrinsicElements {
-        "otc-input": OtcInput;
+        "otp-input": OtpInput;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "otc-input": LocalJSX.OtcInput & JSXBase.HTMLAttributes<HTMLOtcInputElement>;
+            "otp-input": LocalJSX.OtpInput & JSXBase.HTMLAttributes<HTMLOtpInputElement>;
         }
     }
 }

@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
+import { angularOutputTarget, angularValueAccessorBindings } from '@stencil/angular-output-target';
 
 export const config: Config = {
   namespace: 'otp-input',
@@ -9,6 +10,11 @@ export const config: Config = {
     sass()
   ],
   outputTargets: [
+    angularOutputTarget({
+      componentCorePackage: 'component-library',
+      directivesProxyFile: '../component-library-angular/src/directives/proxies.ts',
+      valueAccessorConfigs: angularValueAccessorBindings,
+    }),
     {
       type: 'dist',
       esmLoaderPath: '../loader'

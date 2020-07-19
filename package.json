@@ -1,6 +1,6 @@
 {
   "name": "universal-otp-input",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "An OTP Input that works with all Frameworks or no framework at all!!",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -22,6 +22,7 @@
     "generate": "stencil generate"
   },
   "devDependencies": {
+    "@stencil/angular-output-target": "0.0.3",
     "@stencil/core": "^1.16.4",
     "@stencil/sass": "^1.3.2",
     "@types/mocha": "^8.0.0"
