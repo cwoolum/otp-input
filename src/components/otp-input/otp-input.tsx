@@ -1,20 +1,16 @@
-import { Component, Prop, h, EventEmitter, Event, Listen } from "@stencil/core";
+import { Component, Event, EventEmitter, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "otp-input",
   styleUrl: "otp-input.scss",
   shadow: true,
 })
-export class MyComponent {
-  @Prop() characterCount: number;
+export class OTPInputComponent {
+  @Prop()
+  characterCount: number;
 
-  @Event() codeChanged: EventEmitter<string>;
-
-  @Listen("resize")
-  todoCompletedHandler(event: DocumentEvent) {
-    debugger;
-    console.log(event);
-  }
+  @Event()
+  codeChanged: EventEmitter<string>;
 
   inputRefs: HTMLInputElement[] = [];
 

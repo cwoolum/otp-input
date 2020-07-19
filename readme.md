@@ -49,3 +49,11 @@ Need help? Check out our docs [here](https://stenciljs.com/docs/my-first-compone
   ```
 
 - In `app.module.ts`, add `schemas: [CUSTOM_ELEMENTS_SCHEMA]` to your `@NgModule` configuration.
+
+- In your template, you can reference the define your component like this
+  ```html
+  <otp-input
+    character-count="6"
+    (codeChanged)="codeChanged($event.detail)"
+  ></otp-input>
+  ```
