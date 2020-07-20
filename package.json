@@ -1,6 +1,6 @@
 {
   "name": "universal-otp-input",
-  "version": "0.1.4",
+  "version": "0.2.2",
   "description": "An OTP Input that works with all Frameworks or no framework at all!!",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

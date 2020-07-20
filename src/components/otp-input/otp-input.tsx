@@ -76,11 +76,13 @@ export class OTPInputComponent {
   render() {
     const inputArray = [
       <input
-        type="text"
+        type="number"
         autocomplete="off"
+        inputmode="numeric"
         ref={(input) => {
           this.inputRefs[0] = input;
         }}
+        pattern="[0-9]*"
         maxLength={1}
         onKeyUp={(event: KeyboardEvent) => {
           this.onKeyUp(event, 1);
@@ -91,8 +93,10 @@ export class OTPInputComponent {
     for (let i = 2; i < this.characterCount + 1; i++) {
       inputArray.push(
         <input
-          type="text"
+          type="number"
           autocomplete="off"
+          inputmode="numeric"
+          pattern="[0-9]*"
           maxLength={1}
           onKeyUp={(event: KeyboardEvent) => {
             this.onKeyUp(event, i);

@@ -13,6 +13,7 @@
     font-size: calc(var(--box-height, calc(--box-width * 1.3)) * 0.5);
     color: var(--font-color, white);
     margin: 0 2px;
+    outline: none;
   }
   .splitter {
     padding: 0 5px;
